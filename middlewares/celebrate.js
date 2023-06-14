@@ -30,6 +30,12 @@ const updateUserProfileJoi = celebrate({
   }),
 });
 
+const validateDeleteFilm = celebrate({
+  params: Joi.object().keys({
+    movieId: Joi.number().required(),
+  }),
+});
+
 const validateCreateFilm = celebrate({
   body: Joi.object().keys({
     country: Joi.string().required(),
@@ -50,5 +56,6 @@ module.exports = {
   loginJoi,
   getUserByIdJoi,
   updateUserProfileJoi,
+  validateDeleteFilm,
   validateCreateFilm,
 };

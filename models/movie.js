@@ -1,7 +1,7 @@
-const mongoose = required('mongoose');
-const validator = required('validator');
+const mongoose = require('mongoose');
+const validator = require('validator');
 
-const movieSchema = new mongoose.Scheme({
+const movieSchema = new mongoose.Schema({
   country: {
     type: String,
     required: [true, 'Поле страна обязательное к заполнению.'],
@@ -10,13 +10,17 @@ const movieSchema = new mongoose.Scheme({
     type: String,
     required: [true, 'Поле режиссёр обязательное к заполнению.'],
   },
+  duration: {
+    type: Number,
+    required: [true, 'Поле продолжительность обязательное к заполнению.'],
+  },
   year: {
     type: Number,
     required: [true, 'Поле год выпуска фильма обязательно к заполнению.'],
   },
   description: {
     type: String,
-    required: [true, 'Поле описание фильма обязательно к заполению.']
+    required: [true, 'Поле описание фильма обязательно к заполению.'],
   },
   image: {
     type: String,
@@ -49,7 +53,7 @@ const movieSchema = new mongoose.Scheme({
   },
   movieId: {
     type: Number,
-    required: [true, 'Поле обязательно к заполнению.']
+    required: [true, 'Поле обязательно к заполнению.'],
   },
   nameRU: {
     type: String,
