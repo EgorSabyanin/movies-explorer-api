@@ -6,8 +6,8 @@ const cors = require('cors');
 // CORS Settings
 
 const allowedCors = [
-  'http://mesto-frontend.nomoredomains.rocks',
-  'https://mesto-frontend.nomoredomains.rocks',
+  'http://movies.egorsabyanin.nomoredomains.rocks',
+  'https://movies.egorsabyanin.nomoredomains.rocks',
   'localhost:3000',
   'http://localhost',
   'http://localhost:3000',
