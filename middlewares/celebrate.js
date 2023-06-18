@@ -32,7 +32,7 @@ const updateUserProfileJoi = celebrate({
 
 const validateDeleteFilm = celebrate({
   params: Joi.object().keys({
-    movieId: Joi.number().required(),
+    movieId: Joi.hex().required().length(24),
   }),
 });
 

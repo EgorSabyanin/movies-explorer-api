@@ -73,7 +73,7 @@ module.exports.deleteFilm = (req, res, next) => {
       if (movie.owner.toString() !== userId) {
         throw new AuthorizationError('Вы не можете удалить этот фильм, так как вы не владелец его.');
       }
-      return Movie.findByIdAndDelete(movie._id);
+      return Movie.deleteOne(movie._id);
     })
     .then((deletedMovie) => res.status(SUCCESS_SUCCESS).send(deletedMovie))
     .catch((error) => {
